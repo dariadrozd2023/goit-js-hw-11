@@ -6,6 +6,11 @@
 /*
 
  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -43,12 +48,11 @@ body {
   color: #808080;
   border-color: #808080;
   border-radius: 4px;
-
 }
 #inputSearch:hover {
   border-color: #000000;
 }
-#inputSearch::placeholder{
+#inputSearch::placeholder {
   color: #808080;
 }
 #btnSearch {
@@ -59,7 +63,6 @@ body {
   background-color: #4e75ff;
   border-radius: 4px;
   border-color: transparent;
-
 }
 
 #btnSearch:hover {
@@ -67,21 +70,19 @@ body {
 }
 
 #loader {
-
   flex-wrap: wrap;
   justify-content: center;
   margin: auto;
 
   width: 256px;
   height: 24px;
-  color: #2E2F42;
+  color: #2e2f42;
   border: 5px solid #fff;
   border-bottom-color: transparent;
   border-radius: 50%;
   display: inline-block;
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
-
 }
 
 @keyframes rotation {
@@ -93,52 +94,59 @@ body {
   }
 }
 
-.js-ImagesCart{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.js-ImagesCart {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
-    width: 1128px;
+  width: 1128px;
 
-    margin: auto;
-    list-style: none;
-    padding-left: 0px;
-    margin: auto;
-  
-    gap:24px;
+  margin: auto;
+  list-style: none;
+  padding-left: 0px;
+  margin: auto;
+
+  gap: 24px;
 }
-.js-list{
+.js-list {
   width: 360px;
   height: 200px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
   overflow: hidden;
-  border: 1px solid #808080; 
+  border: 1px solid #808080;
+  position: relative;
 }
-.js-image{
-height: 111px;
-
+.js-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
-.js-dates{
+.js-dates {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
-
+  position: absolute;
+  background-color: #ffffff;
   width: 360px;
   height: 48px;
 
   list-style: none;
   padding-left: 20px;
-  
+
+  position: absolute;
+  bottom: -8%; /* Відступ від нижнього краю */
+  left: 50%;
+  transform: translateX(-50%);
 }
-.js-date{
-  color: #2E2F42;
-font-family: "semiBolt";
-font-size: 16px;
+.js-date {
+  color: #2e2f42;
+  font-family: 'semiBolt';
+  font-size: 16px;
 }
 .iziToast-wrapper {
   height: 88px;
-  width: 432px!important;
+  width: 432px !important;
   top: 0;
 }
 /* .iziToast-wrapper-bottomRight {
