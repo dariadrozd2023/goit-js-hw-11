@@ -66,6 +66,7 @@ export function onBtnSearch(event) {
     })
     .finally(() => {
       refs.loader.style.display = 'none';
+    // console.log(event.target.elements);
     });
 }
 function markUpSearchImg(arr) {
