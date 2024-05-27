@@ -112,7 +112,7 @@ function showLargeImg(event) {
       },
     }
   );
-  instance.show();
+  // instance.show();
 }
 function handleEscapeKeyPress(event) {
   if (event.code === 'Escape') {
