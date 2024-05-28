@@ -1,6 +1,6 @@
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-import * as basicLightbox from 'basiclightbox';
+// import * as basicLightbox from 'basiclightbox';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
@@ -66,7 +66,6 @@ export function onBtnSearch(event) {
     })
     .finally(() => {
       refs.loader.style.display = 'none';
-    // console.log(event.target.elements);
     });
 }
 function markUpSearchImg(arr) {
