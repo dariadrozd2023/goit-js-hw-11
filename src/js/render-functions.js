@@ -12,7 +12,7 @@ const refs = {
   loader: document.querySelector('.loader'),
 };
 refs.formSearch.addEventListener('submit', onBtnSearch);
-refs.galleryList.addEventListener('click', showLargeImg);
+// refs.galleryList.addEventListener('click', showLargeImg);
 
 const lightbox = new SimpleLightbox('.js-ImagesCart a', {
   captionsData: 'alt',
@@ -95,30 +95,30 @@ function markUpSearchImg(arr) {
     )
     .join('');
 }
-function showLargeImg(event) {
-  event.preventDefault();
-  if (event.target.nodeName !== 'IMG') {
-    return;
-  }
-  const largeImageURL = event.target.closest('a').href;
-  const instance = basicLightbox.create(
-    `<img src="${largeImageURL}" width="800" height="600" alt="${event.target.alt}">`,
-    {
-      onShow: () => {
-        document.addEventListener('keydown', handleEscapeKeyPress);
-      },
-      onClose: () => {
-        document.removeEventListener('keydown', handleEscapeKeyPress);
-      },
-    }
-  );
-  // instance.show();
-}
-function handleEscapeKeyPress(event) {
-  if (event.code === 'Escape') {
-    const instance = basicLightbox.visible();
-    if (instance) {
-      instance.close();
-    }
-  }
-}
+// function showLargeImg(event) {
+//   event.preventDefault();
+//   if (event.target.nodeName !== 'IMG') {
+//     return;
+//   }
+  // const largeImageURL = event.target.closest('a').href;
+  // const instance = basicLightbox.create(
+  //   `<img src="${largeImageURL}" width="800" height="600" alt="${event.target.alt}">`,
+  //   {
+  //     onShow: () => {
+  //       document.addEventListener('keydown', handleEscapeKeyPress);
+  //     },
+  //     onClose: () => {
+  //       document.removeEventListener('keydown', handleEscapeKeyPress);
+  //     },
+  //   }
+  // );
+
+// }
+// function handleEscapeKeyPress(event) {
+//   if (event.code === 'Escape') {
+//     const instance = basicLightbox.visible();
+//     if (instance) {
+//       instance.close();
+//     }
+//   }
+// }
