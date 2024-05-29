@@ -10,29 +10,41 @@ const refs = {
     loader: document.querySelector('.loader'),
 
   };
-  
-  export function submitSearch(e) {
-      e.preventDefault();
-      checkInput();
 
-  }
   
-
- export function checkInput() {
-      const inputValue = refs.inputSearch.value.trim();
-      if (inputValue ==='' ) {
-          iziToast.show({
-              message:
-                'please,enter the name of the picture you are looking fo for',
-              timeout: 5000,
-              backgroundColor: '#a0cdde',
-            });
-            
-        refs.btnSearch.disabled = true; // робимо кнопку неактивною
-      } else {
-        refs.btnSearch.disabled = false; // робимо кнопку активною у разі успіху
-      }
+  export function checkInput() {
+    const inputValue = refs.inputSearch.value.trim();
+    const placeholderValue = refs.inputSearch.placeholder;
+  
+    if (inputValue === '' || inputValue === placeholderValue) {
+      iziToast.show({
+        message: 'Please, enter the name of the picture you are looking for',
+        timeout: 5000,
+        backgroundColor: '#a0cdde',
+      });
+  
+      refs.btnSearch.disabled = true; // робимо кнопку неактивною
+      return false;
+    } else {
+      refs.btnSearch.disabled = false; // робимо кнопку активною у разі успіху
+      return true;
     }
-
-
-
+  }
+  // export function checkInput() {
+  //   const inputValue = refs.inputSearch.value.trim();
+  //   const placeholderValue = refs.inputSearch.placeholder;
+  
+  //   if (inputValue === '' || inputValue === placeholderValue) {
+  //     iziToast.show({
+  //       message: 'Please, enter the name of the picture you are looking for',
+  //       timeout: 5000,
+  //       backgroundColor: '#a0cdde',
+  //     });
+  
+  //     refs.btnSearch.disabled = true; // робимо кнопку неактивною
+  //     return;
+  //   } else {
+  //     refs.btnSearch.disabled = false; // робимо кнопку активною у разі успіху
+  //   }
+  // }
+ 
