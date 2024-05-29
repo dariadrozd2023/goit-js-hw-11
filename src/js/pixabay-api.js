@@ -30,6 +30,16 @@ const refs = {
       return true;
     }
   }
+  // Додаємо обробники подій до інпуту для очищення та відновлення placeholder
+refs.inputSearch.addEventListener('focus', () => {
+  refs.inputSearch.placeholder = ''; // Очищаємо placeholder при фокусі
+});
+
+refs.inputSearch.addEventListener('blur', () => {
+  if (refs.inputSearch.value.trim() === '') {
+    refs.inputSearch.placeholder = 'Search images...'; // Відновлюємо placeholder при втраті фокуса, якщо інпут порожній
+  }
+});
   // export function checkInput() {
   //   const inputValue = refs.inputSearch.value.trim();
   //   const placeholderValue = refs.inputSearch.placeholder;

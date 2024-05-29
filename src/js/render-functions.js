@@ -251,13 +251,4 @@ function markUpSearchImg(arr) {
     .join('');
 }
 
-// Додаємо обробники подій до інпуту для очищення та відновлення placeholder
-refs.inputSearch.addEventListener('focus', () => {
-  refs.inputSearch.placeholder = ''; // Очищаємо placeholder при фокусі
-});
 
-refs.inputSearch.addEventListener('blur', () => {
-  if (refs.inputSearch.value.trim() === '') {
-    refs.inputSearch.placeholder = 'Please enter something'; // Відновлюємо placeholder при втраті фокуса, якщо інпут порожній
-  }
-});
