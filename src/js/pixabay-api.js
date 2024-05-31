@@ -40,21 +40,4 @@ refs.inputSearch.addEventListener('blur', () => {
     refs.inputSearch.placeholder = 'Search images...'; // Відновлюємо placeholder при втраті фокуса, якщо інпут порожній
   }
 });
-  // export function checkInput() {
-  //   const inputValue = refs.inputSearch.value.trim();
-  //   const placeholderValue = refs.inputSearch.placeholder;
-  
-  //   if (inputValue === '' || inputValue === placeholderValue) {
-  //     iziToast.show({
-  //       message: 'Please, enter the name of the picture you are looking for',
-  //       timeout: 5000,
-  //       backgroundColor: '#a0cdde',
-  //     });
-  
-  //     refs.btnSearch.disabled = true; // робимо кнопку неактивною
-  //     return;
-  //   } else {
-  //     refs.btnSearch.disabled = false; // робимо кнопку активною у разі успіху
-  //   }
-  // }
  
